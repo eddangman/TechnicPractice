@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>02-05_class_add-remove</title>
-<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
-<style type="text/css">
-* {
-    margin: 0 ;
-    padding: 0;
-}
-.box {
-    border: 2px solid blue;
-    width: 100px;
-    text-align: center;
-}
-.box_0, .box_1, .box_2 {
-    border: 1px solid orange;
-    width: 200px;
-    height: 60px;
-    font-size: 24px;
-    border-radius: 30px;
-    line-height: 50px;
-    display: inline-block;     
-}
-#c2 {
-    text-align: center;
-}
-.contents, .bg {
-    border: 1px solid red;
-    width: 100px;
-    height: 100px;   
-}
-</style>
+    <meta charset="UTF-8">
+    <title>02-05_class_add-remove</title>
+    <script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid blue;
+            width: 100px;
+            text-align: center;
+        }
+
+        .box_0,
+        .box_1,
+        .box_2 {
+            border: 1px solid orange;
+            width: 200px;
+            height: 60px;
+            font-size: 24px;
+            border-radius: 30px;
+            line-height: 50px;
+            display: inline-block;
+        }
+
+        #c2 {
+            text-align: center;
+        }
+
+        .contents,
+        .bg {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
+
 <body>
-     <h1>class add, remove</h1>
-     <br>
-     <div id="c1">
-          <div>jQuery</div>
-     </div>
-     <br>
-     <div id ="c2">
-          <div>html</div>
-          <div>css</div>
-          <div>javascript</div>
-     </div>
-     <hr>
-     <div id="r1">
-          <div class="contents">jQuery</div>
-     </div>
-     <br>
-     <div id ="r2">
-          <div class="bg">html</div>
-          <div class="bg">css</div>
-          <div class="bg">javascript</div>
-     </div>
-     
-     <!-- javascript -->
-     <script type="text/javascript">
+    <h1>class add, remove</h1>
+    <br>
+    <div id="c1">
+        <div>jQuery</div>
+    </div>
+    <br>
+    <div id="c2">
+        <div>html</div>
+        <div>css</div>
+        <div>javascript</div>
+    </div>
+    <hr>
+    <div id="r1">
+        <div class="contents">jQuery</div>
+    </div>
+    <br>
+    <div id="r2">
+        <div class="bg">html</div>
+        <div class="bg">css</div>
+        <div class="bg">javascript</div>
+    </div>
+
+    <!-- javascript -->
+    <script type="text/javascript">
         /*  
            # addClass()
            - class 속성을 추가합니다.
@@ -65,22 +74,23 @@
            # removeClass()
            - class 속성을 삭제합니다.
         */
-        
-         $(document).ready(function() {        	 
-        	 $("#c1 >div").addClass("box");
-        	 
-        	 $("#c2 >div").addClass(function(index) {
-        		 return "box_"+index;
-        		 });
-        	 
-        	 $("#r1 >div").removeClass("contents");  
-        	 
-        	 $("#r2 >div").removeClass(function(index) {
-        		 return "bg";
-        		 });
-        	 });
-        
-     </script>
+
+        $(document).ready(function () {
+            $("#c1 >div").addClass("box");
+
+            $("#c2 >div").addClass(function (index) {
+                return "box_" + index;
+            });
+
+            $("#r1 >div").removeClass("contents");
+
+            $("#r2 >div").removeClass(function (index) {
+                return "bg";
+            });
+        });
+
+    </script>
 
 </body>
+
 </html>
