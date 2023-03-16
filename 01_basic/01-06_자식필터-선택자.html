@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>01-06_자식필터-선택자</title>
-<!--  
+     <meta charset="UTF-8">
+     <title>01-06_자식필터-선택자</title>
+     <!--  
     # 자식 필터 선택자
     - 'child' 가 붙은 선택자는 요소가 순차적으로 나열되어 있을 때 사용하고,
       'of-type' 이 붙은 선택자는 요소가 순차적으로 나열되어 있지 않아도 선택이 가능합니다.
 -->
-<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+     <script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
 </head>
+
 <body>
      <h1>자식 필터 선택자</h1>
      <div id="m1">
@@ -34,7 +36,7 @@
      <div id="m4">
           <strong>내용 4-1</strong>
           <span>내용 4-2</span>
-          <strong>내용 4-3</strong>          
+          <strong>내용 4-3</strong>
           <span>내용 4-4</span>
           <strong>내용 4-5</strong>
           <span>내용 4-6</span>
@@ -43,37 +45,38 @@
      <div id="m5">
           <strong>내용 5-1</strong>
           <span>내용 5-2</span>
-          
+
      </div>
-     
+
      <!-- javascript -->
      <script type="text/javascript">
-           // # m1 첫번째 span 요소 선택
-           $("#m1 > span:first-child").css("border","2px solid red");
-           
-           // # m1 마지막 span 요소 선택
-           $("#m1 > span:last-child").css("border","2px solid pink");
-        
-           // # m2 의 span 요소 중 첫번째 선택
-           $("#m2 > span:first-of-type").css("border","2px solid green");
-           
-           // # m2 의 span 요소 중 마지막 선택
-           $("#m2 > span:last-of-type").css("border","2px solid lightgreen");
-           
-           // # m3 첫번째 요소 선택
-           $("#m3 > span:nth-child(1)").css("border","2px solid blue");
-           
-           // # m3 마지막 요소 선택
-           $("#m3 > span:nth-last-child(1)").css("border","2px solid lightblue");
-           
-           // # m4 의 첫번째 span 요소 선택
-           $("#m4 > span:nth-of-type(1)").css("border","2px solid orange");
-           
-           // # m4 의 마지막에서 첫번째 span 요소 선택
-           $("#m4 > span:nth-last-of-type(1)").css("border","2px solid gold");
-           
-           // # m5 의 자식 요소 중에서 span 요소가 하나만 있는 요소선택
-           $("#m5 > span:only-of-type").css("border","2px solid purple");
-     </script>     
+          // # m1 첫번째 span 요소 선택
+          $("#m1 > span:first-child").css("border", "2px solid red");
+
+          // # m1 마지막 span 요소 선택
+          $("#m1 > span:last-child").css("border", "2px solid pink");
+
+          // # m2 의 span 요소 중 첫번째 선택
+          $("#m2 > span:first-of-type").css("border", "2px solid green");
+
+          // # m2 의 span 요소 중 마지막 선택
+          $("#m2 > span:last-of-type").css("border", "2px solid lightgreen");
+
+          // # m3 첫번째 요소 선택
+          $("#m3 > span:nth-child(1)").css("border", "2px solid blue");
+
+          // # m3 마지막 요소 선택
+          $("#m3 > span:nth-last-child(1)").css("border", "2px solid lightblue");
+
+          // # m4 의 첫번째 span 요소 선택
+          $("#m4 > span:nth-of-type(1)").css("border", "2px solid orange");
+
+          // # m4 의 마지막에서 첫번째 span 요소 선택
+          $("#m4 > span:nth-last-of-type(1)").css("border", "2px solid gold");
+
+          // # m5 의 자식 요소 중에서 span 요소가 하나만 있는 요소선택
+          $("#m5 > span:only-of-type").css("border", "2px solid purple");
+     </script>
 </body>
+
 </html>

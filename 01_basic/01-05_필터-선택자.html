@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>01-05_필터-선택자</title>
-<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
-<style type="text/css">
-body {
-   font-size: 24px;
-}
-table, tr, td {
-     border: 1px solid gray;
-     border-collapse: collapse;
-}
-table {
-    border: 1px solid gray;
-    border-collapse: collapse;
-    width: 300px;
-	height: 200px;
-    
-}
-td {    
-    text-align: center;
-}
-h2{
-  display: none;
-}
-#top{
-   padding:5px;
-   background-color: gray;
-   border: 1px solid blue;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>01-05_필터-선택자</title>
+    <script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+    <style type="text/css">
+        body {
+            font-size: 24px;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        table {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            width: 300px;
+            height: 200px;
+
+        }
+
+        td {
+            text-align: center;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        #top {
+            padding: 5px;
+            background-color: gray;
+            border: 1px solid blue;
+        }
+    </style>
 </head>
+
 <body>
-     <h1>&lt;필터 선택자&gt;</h1>
-     <div id="top">
-     <h2>제목 2</h2>
-     </div>
-     <table border="1">
-           <caption>필터 선택자</caption>
-           <tbody>
-                <tr>
-                    <td>1</td><td>2</td><td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td><td>5</td><td>6</td>
-                </tr>
-                <tr>
-                    <td>7</td><td>8</td><td>9</td>
-                </tr>
-                <tr>
-                    <td>10</td><td>11</td><td>12</td>
-                </tr>              
-           </tbody>          
-     </table>
-     <br>
-     <ul>
-         <li class="bg">내용 1</li>
-         <li class="bg">내용 2</li>
-         <li class="bg">내용 3</li>
-     </ul>
-     
-     <!-- javascript -->
-     <script type="text/javascript">
-         $(document).ready(function() {
-        	 $("tr:even").css("background","red"); // tr 요소중 짝수행만 선택		
-        	 $("tr:odd").css("background","orange"); // tr 요소중 홀수행만 선택
-        	 $("td:first").css("background","lightblue"); // 첫번째 td 선택
-        	 $("td:last").css("background","yellow"); // 마지막 td 선택
-        	 $("li:eq(0)").css("background", "purple"); // index 가 0 인 li 요소 선택
-        	 $("li:gt(0)").css("background", "lightgreen"); // index 가 0보다 큰 li 요소 선택
-        	 
-        	 $("#top").mouseover(function() {
-				$("h2").slideDown("fast");				
-			});
-        	 $("#top").mouseout(function() {
- 				$("h2").slideUp("fast");				
- 			});
-        	
-        /*  $(document).ready(function(){
-        	  $("#flip").click(function(){
-        	    $("#panel").slideToggle("slow");
-        	  });
-        	}); 
-         $(":animated").css("background","indianred"); */
-         });
-     </script>
+    <h1>&lt;필터 선택자&gt;</h1>
+    <div id="top">
+        <h2>제목 2</h2>
+    </div>
+    <table border="1">
+        <caption>필터 선택자</caption>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <ul>
+        <li class="bg">내용 1</li>
+        <li class="bg">내용 2</li>
+        <li class="bg">내용 3</li>
+    </ul>
+
+    <!-- javascript -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("tr:even").css("background", "red"); // tr 요소중 짝수행만 선택		
+            $("tr:odd").css("background", "orange"); // tr 요소중 홀수행만 선택
+            $("td:first").css("background", "lightblue"); // 첫번째 td 선택
+            $("td:last").css("background", "yellow"); // 마지막 td 선택
+            $("li:eq(0)").css("background", "purple"); // index 가 0 인 li 요소 선택
+            $("li:gt(0)").css("background", "lightgreen"); // index 가 0보다 큰 li 요소 선택
+
+            $("#top").mouseover(function () {
+                $("h2").slideDown("fast");
+            });
+            $("#top").mouseout(function () {
+                $("h2").slideUp("fast");
+            });
+
+            /*  $(document).ready(function(){
+                  $("#flip").click(function(){
+                    $("#panel").slideToggle("slow");
+                  });
+                }); 
+             $(":animated").css("background","indianred"); */
+        });
+    </script>
 </body>
+
 </html>

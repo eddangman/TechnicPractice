@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>01-07_폼필터-선택자</title>
-<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
-<style type="text/css">
-body{
-   font-size: 24px;  
-}
-input, select{
-      height: 26px;
-}
-input[type =checkbox] {
-	width: 24px;
-	height: 24px;
-	position: relative;
-	top:4px;
-	
-}
-</style>
+    <meta charset="UTF-8">
+    <title>01-07_폼필터-선택자</title>
+    <script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+    <style type="text/css">
+        body {
+            font-size: 24px;
+        }
+
+        input,
+        select {
+            height: 26px;
+        }
+
+        input[type=checkbox] {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            top: 4px;
+
+        }
+    </style>
 </head>
+
 <body>
-     <h1>폼 필터 선택자</h1>
-     <div>
-         <label> text </label><input type="text">
-     </div>
-     <br>
-     <div>
-         <label> password </label><input type="password">
-     </div>
-     <br>
-     <div>
-          <input type="checkbox" id="css" checked="checked"><label for="css">CSS</label>
-     </div>
-     <br>
-     <div>
-          <select>
-              <option>과목 선택</option>
-              <option>JAVA</option>
-              <option selected="selected">jQuery</option>
-          </select>
-     </div>
-     <br>
-     <textarea rows="5" cols="30" disabled="disabled" >textarea</textarea>
-     
-     <!-- javascript -->     
-     <script type="text/javascript">
+    <h1>폼 필터 선택자</h1>
+    <div>
+        <label> text </label><input type="text">
+    </div>
+    <br>
+    <div>
+        <label> password </label><input type="password">
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="css" checked="checked"><label for="css">CSS</label>
+    </div>
+    <br>
+    <div>
+        <select>
+            <option>과목 선택</option>
+            <option>JAVA</option>
+            <option selected="selected">jQuery</option>
+        </select>
+    </div>
+    <br>
+    <textarea rows="5" cols="30" disabled="disabled">textarea</textarea>
+
+    <!-- javascript -->
+    <script type="text/javascript">
         $(document).ready(function () {
-			$("input:text").css("background","lightpink");
-			$("input:password").css("background","yellow");
-			$("input:checked + label").css("background","skyblue");
-			$("option:selected").css("background","lightgreen");
-			$("textarea:disabled").css("background","bisque");
-		});
-     
-     </script>
+            $("input:text").css("background", "lightpink");
+            $("input:password").css("background", "yellow");
+            $("input:checked + label").css("background", "skyblue");
+            $("option:selected").css("background", "lightgreen");
+            $("textarea:disabled").css("background", "bisque");
+        });
+
+    </script>
 
 
 
@@ -62,25 +67,5 @@ input[type =checkbox] {
 
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

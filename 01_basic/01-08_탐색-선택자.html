@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>01-08_탐색-선택자</title>
-<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+     <meta charset="UTF-8">
+     <title>01-08_탐색-선택자</title>
+     <script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
 </head>
+
 <body>
-    <h1>탐색 선택자</h1>
-    <div id="m1">
-         <a href="#">내용 1-1</a>
-         <span>내용 1-2</span>
-    </div>
-    <hr>
-    <div id="m2">
-         <a href="#">내용 2-1</a>
-         <span>내용 2-2</span>
-         <span>내용 2-3</span>
-    </div>
-    <hr>
-    <div id="m3">
-         <div>
-             <span>내용 3-1</span>
-         </div>
-    </div>
-    <hr>
-    <div id="m4">
-         <span class="m">내용 4-1</span>
-         <span>내용 4-2</span>
-         <span>내용 4-3</span>
-         <em>내용 4-4</em>
-    </div>
-    <hr>
-    <div id="m5">
-         <span class="m">내용 5-1</span>
-         <span>내용 5-2</span>
-         <span>내용 5-3</span>
-    </div>
-    <hr>
-    <div id="m6">
-         <div>
-              <span>내용 6-1</span>  
-         </div>
-         <div>내용 6-2</div>          
-    </div>
-    
-    <!-- javascript -->
-    <script type="text/javascript">
-        // # m1 자식 요소 선택
-        $("#m1").children().css("border","2px solid red");
-        
-        // # m2 의 자식 요소 span 선택
-        $("#m2").children("span").css("border","2px solid orange");
-        
-        // # m3 span 의 첫번째 부모 div
-        $("#m3 span").closest("div").css("border","2px solid green");
-        
-        // # m4 > span.m 의 다음 요소 부터 em 전까지의 요소 선택
-        $("#m4 > span.m").nextUntil("em").css("border","2px solid blue");
-        
-        // #m5 > span 요소 중 class 가 'm'인 요소 선택
-        $("#m5 > span").filter(".m").css("border","2px solid olive");
-        
-        // #m6 > div 요소 중 span 요소를 포함하고 있는 요소 선택
-        $("#m6 > div").has("span").css("border","2px solid brown");
-    </script>
+     <h1>탐색 선택자</h1>
+     <div id="m1">
+          <a href="#">내용 1-1</a>
+          <span>내용 1-2</span>
+     </div>
+     <hr>
+     <div id="m2">
+          <a href="#">내용 2-1</a>
+          <span>내용 2-2</span>
+          <span>내용 2-3</span>
+     </div>
+     <hr>
+     <div id="m3">
+          <div>
+               <span>내용 3-1</span>
+          </div>
+     </div>
+     <hr>
+     <div id="m4">
+          <span class="m">내용 4-1</span>
+          <span>내용 4-2</span>
+          <span>내용 4-3</span>
+          <em>내용 4-4</em>
+     </div>
+     <hr>
+     <div id="m5">
+          <span class="m">내용 5-1</span>
+          <span>내용 5-2</span>
+          <span>내용 5-3</span>
+     </div>
+     <hr>
+     <div id="m6">
+          <div>
+               <span>내용 6-1</span>
+          </div>
+          <div>내용 6-2</div>
+     </div>
+
+     <!-- javascript -->
+     <script type="text/javascript">
+          // # m1 자식 요소 선택
+          $("#m1").children().css("border", "2px solid red");
+
+          // # m2 의 자식 요소 span 선택
+          $("#m2").children("span").css("border", "2px solid orange");
+
+          // # m3 span 의 첫번째 부모 div
+          $("#m3 span").closest("div").css("border", "2px solid green");
+
+          // # m4 > span.m 의 다음 요소 부터 em 전까지의 요소 선택
+          $("#m4 > span.m").nextUntil("em").css("border", "2px solid blue");
+
+          // #m5 > span 요소 중 class 가 'm'인 요소 선택
+          $("#m5 > span").filter(".m").css("border", "2px solid olive");
+
+          // #m6 > div 요소 중 span 요소를 포함하고 있는 요소 선택
+          $("#m6 > div").has("span").css("border", "2px solid brown");
+     </script>
 </body>
+
 </html>
