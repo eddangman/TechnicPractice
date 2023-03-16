@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>02-07_attr</title>
-<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+     <meta charset="UTF-8">
+     <title>02-07_attr</title>
+     <script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
 </head>
+
 <body>
      <h1> attr() </h1>
      <br>
@@ -12,20 +14,21 @@
           <a href="http://www.naver.com" target="_blank">NAVER</a>
           <br>
           <a href="http://www.daum.net" target="_blank">DAUM</a>
-      </div>
-      
-      <!-- javascript -->
-      <script type="text/javascript">
-           /*  
-              # attr()
-              - 선택한 요소의 attribute(속성)을 선택,생성,변경 할수있다.(html 속성값)
-              
-           */
-           $(document).ready(function() {
-        	   console.log($("#site > a:eq(0)").attr("href"));
-        	   
-        	   $("#site > a:eq(1)").attr("href", "http://www.google.com").text("Google");
-        });
-      </script>
+     </div>
+
+     <!-- javascript -->
+     <script type="text/javascript">
+          /*  
+             # attr()
+             - 선택한 요소의 attribute(속성)을 선택,생성,변경 할수있다.(html 속성값)
+             
+          */
+          $(document).ready(function () {
+               console.log($("#site > a:eq(0)").attr("href"));
+
+               $("#site > a:eq(1)").attr("href", "http://www.google.com").text("Google");
+          });
+     </script>
 </body>
+
 </html>
