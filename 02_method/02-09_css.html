@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02-09_css</title>
+<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-size: 24px;
+}
+div > p:nth-child(1) {
+    background-color: red;  
+}
+div > p:nth-child(2) {
+    background-color: green;  
+}
+div > p:nth-child(3) {
+    background-color: blue;  
+}
+
+</style>
+</head>
+<body>
+     <h1> css() </h1>
+     <br>
+     <div id="c1">
+          <p>내용 1</p>
+          <p>내용 2</p>
+          <p>내용 3</p>          
+     </div>
+     
+     <!-- javascript -->
+     <script type="text/javascript">
+          $(document).ready(function() {        	  
+        	  $("p").eq(0).css("background","orange");
+        	  
+        	  $("p").eq(1).css({
+        		  padding: 10,
+        		  "font-size": 30,
+        		  "text-align":"center"
+        	  });
+		}); 
+     </script>
+</body>
+</html>

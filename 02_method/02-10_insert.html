@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02-10_insert</title>
+<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+<style type="text/css">
+* {
+   margin: 0;
+   padding: 0;
+}
+body {
+	font-family: "굴림",sans-serif;
+	font-size: 14px;
+}
+#in_1 {
+    background-color: bisque;
+}
+#in_2 {
+    background-color: skyblue;
+}
+
+/* #wrap */
+#wrap {
+    margin: 0 auto;
+    width: 200px;
+}
+#wrap .page {
+    text-align: center;
+    margin-bottom: 5px;
+}
+#wrap .page .page_number {
+     display: inline-block; 
+     margin-right: 10px;
+}
+#wrap .page button {
+     border: none;
+     background-color: #333333;
+     color: white;
+     font-weight: bold;
+     width: 20px;
+     height: 20px;
+     line-height:22px;
+     overflow: hidden;
+     border-radius: 5px;         
+}
+#wrap .visual {
+     width: 200px;
+     height: 200px;
+     border: 1px solid gray;
+     overflow: hidden;
+}
+</style>
+</head>
+<body>
+     <h1> insert </h1>
+     <br>
+     <div id="in_1"><strong>내용 1</strong></div>
+     <br>
+     <div id="in_2"><strong>내용 2</strong></div>
+     <br>
+     <hr>
+     <!-- .wrap -->
+     <div id="wrap">
+     <!-- .page -->
+     <div class="page">
+          <span class="page_number">
+                <span></span> / <span></span>
+          </span>
+          <button class="prev">&lt; 이전</button>
+          <button class="next">&gt; 다음</button>
+     </div>
+     <!-- .visual -->
+     <div class="visual">
+         <div><a href="#"><img src="../../image/jquery_image/1.jpg"></a></div>
+         <div><a href="#"><img src="../../image/jquery_image/2.jpg"></a></div>
+         <div><a href="#"><img src="../../image/jquery_image/3.jpg"></a></div>
+         <div><a href="#"><img src="../../image/jquery_image/4.jpg"></a></div>      
+     </div>     
+ </div>
+ 
+      <!--  -->
+      <script type="text/javascript">
+         $(document).ready(function() {
+        	 // #in_1 에 p 요소를 첫번째 자식 요소로 삽입
+        	 $("#in_1").prepend("<p>삽입 1-1</p>");
+        	 
+        	 // #in_1 에 p 요소를 마지막 자식 요소로 삽입
+        	 $("#in_1").append("<p>삽입 1-2</p>");
+        	 
+        	 $("#in_1").before("<p>#in_1 이전에 삽입</p>");
+        	 $("#in_1").after("<p>#in_1 다음에 삽입</p>");
+        	 
+        	 $("<p>삽입 2-1</p>").prependTo("#in_2");
+        	 $("<p>삽입 2-2</p>").appendTo("#in_2");
+        	 
+        	 $("<p>#in_2 이전에 삽입</p>").insertBefore("#in_2");
+        	 $("<p>#in_2 다음에 삽입</p>").insertAfter("#in_2");
+        	 
+        	 /* #wrap 이미지 변경 */
+        	 let totalNum = $(".visual > div").length;
+        	 let currentNum = 1;
+        	 $(".page_number > span:first").text(currentNum);
+        	 $(".page_number > span:last").text(totalNum);
+        	 $(".next").click(function() {
+        		 currentNum++;
+        		 if(currentNum > totalNum){
+        			 currentNum =1;
+        		 }
+        		 $(".visual div:first").insertAfter(".visual div:last");
+        		 $(".page_number > span:first").text(currentNum);       		 
+			});
+        	 $(".prev").click(function() {
+    			 currentNum--;
+    			 if(currentNum < 1){
+    				 currentNum =totalNum;
+    			 }
+    			 $(".visual div:last").insertBefore(".visual div:first");
+        		 $(".page_number > span:first").text(currentNum);
+    			 
+				
+			});
+        	 
+        	 
+        	 
+        	
+        	
+			
+		});   
+      </script>
+ 
+ 
+</body>
+</html>

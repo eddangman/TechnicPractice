@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02-03_text</title>
+<script type="text/javascript" src="../../04_JQuery/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1> text() </h1>
+    <br>
+    <div id="c1">jQuery</div>
+    <div id="c2">
+         <div>html</div>
+         <div>css</div>
+         <div>javascript</div>
+    </div>
+    <div id="c3"></div>
+    
+    <!-- javascript -->
+    <script type="text/javascript">
+        /*  
+           # .text()
+           - 텍스트를 사용, 생성, 변경합니다.
+           - 사용(취득) : $().text()
+             생성, 변경 : $().text("텍스트 생성 및 변경")
+        */
+        
+        $(document).ready(function() {
+			console.log($("#c1").text());
+			console.log("\n");
+			
+			let c1 =$("#c1").text();
+			console.log("c1 : " + c1);
+			console.log("\n");
+			
+			$("#c3").text("내용 변경");
+			
+			$("#c2 > div").text(function(index, value) {
+				return "index : " +index+" - value : " + value;				
+			});
+			
+			
+			
+			
+		});
+    </script> 
+</body>
+</html>
